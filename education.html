@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anwar Hakim Tamim — Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Education profile — Anwar Hakim Tamim" />
+  <style>
+    :root{--bg:#071022;--card:#0b1320;--muted:#93a6b8;--accent:#00e5ff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#020613 0%,#081426 100%);color:#e6f0fb}
+    .wrap{max-width:900px;margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    header img{width:84px;height:84px;border-radius:10px;object-fit:cover;border:2px solid rgba(0,229,255,0.12)}
+    header h1{font-family:Orbitron,monospace;color:var(--accent);margin:0;font-size:26px}
+    header p{margin:2px 0 0;color:var(--muted)}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(0,229,255,0.06);padding:18px;border-radius:12px;margin-top:22px}
+    .school{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+    .school .left{max-width:68%}
+    .school h2{margin:0;color:var(--accent);font-family:Orbitron,monospace}
+    .muted{color:var(--muted);font-size:14px}
+    .meta{font-weight:600;color:#cfefff}
+    .cgpa{background:rgba(0,229,255,0.08);padding:6px 10px;border-radius:8px;border:1px solid rgba(0,229,255,0.12);font-weight:700}
+    .timeline{margin-top:16px;border-left:2px solid rgba(0,229,255,0.06);padding-left:18px}
+    .course-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin-top:12px}
+    .course{background:rgba(255,255,255,0.02);padding:8px;border-radius:8px;font-size:14px;color:var(--muted)}
+    footer{margin-top:30px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media(max-width:640px){header{flex-direction:column;align-items:flex-start} .school .left{max-width:100%}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="https://raw.githubusercontent.com/anwarhakimtamim/anwarhakimtamim.github.io/refs/heads/main/tamim.jpg" alt="Anwar photo">
+      <div>
+        <h1>Anwar Hakim Tamim</h1>
+        <p class="muted">Buffalo, NY, USA • anwarhak@buffalo.edu • +1 929-372-2666</p>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="school">
+        <div class="left">
+          <h2>University at Buffalo, State University of New York</h2>
+          <p class="muted">MS — Microelectronics & Semiconductor Engineering</p>
+          <p class="meta">Aug 2024 — Dec 2025</p>
+          <div style="margin-top:10px">
+            <span class="cgpa">CGPA: 3.857</span>
+          </div>
+          <div class="timeline">
+            <p class="muted">Relevant coursework & highlights:</p>
+            <div class="course-list">
+              <div class="course">Microelectronic Fabrication Lab</div>
+              <div class="course">Microelectronic Device Fabrication</div>
+              <div class="course">Fundamentals of Semiconductor Devices</div>
+              <div class="course">Solid State Sensors</div>
+              <div class="course">Fundamentals of Modern VLSI Devices</div>
+              <div class="course">RF / Microwave Circuits</div>
+            </div>
+          </div>
+        </div>
+        <div class="right" style="text-align:right">
+          <p class="muted">Location</p>
+          <p class="meta">Buffalo, NY, USA</p>
+          <p style="margin-top:14px;color:var(--muted)">Expected graduation: <strong style="color:#cfefff">Dec 2025</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="school">
+        <div class="left">
+          <h2>Ahsanullah University of Science and Technology</h2>
+          <p class="muted">BS — Electrical & Electronic Engineering</p>
+          <p class="meta">Mar 2018 — Dec 2022</p>
+          <div style="margin-top:10px">
+            <span class="cgpa">CGPA: 3.12</span>
+          </div>
+          <div class="timeline">
+            <p class="muted">Selected coursework:</p>
+            <div class="course-list">
+              <div class="course">Analog Integrated Circuits</div>
+              <div class="course">Digital Integrated Circuits</div>
+              <div class="course">Consumer Optoelectronics</div>
+              <div class="course">RF / Microwave basics</div>
+            </div>
+          </div>
+        </div>
+        <div class="right" style="text-align:right">
+          <p class="muted">Location</p>
+          <p class="meta">Dhaka, Bangladesh</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="muted">Printable & shareable education page — customize or export to PDF for applications.</div>
+    </footer>
+  </div>
+</body>
+</html>
