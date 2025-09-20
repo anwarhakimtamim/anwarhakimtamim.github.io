@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Anwar Hakim Tamim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio of Anwar Hakim Tamim — Microelectronics & Semiconductor Engineering." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071020 0%, #071722 100%);}
+    .container{width:90%;max-width:var(--maxw);margin:0 auto;padding:48px 0}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-block}
+
+    .hero{margin:48px 0;text-align:center}
+    .hero h1{font-size:38px;margin:0 0 12px}
+    .hero p{margin:0;color:var(--muted)}
+
+    section{margin:48px 0}
+    h2{margin:0 0 12px;font-size:24px}
+    .sub{color:var(--muted);margin-bottom:18px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+    .card{background:var(--card);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);font-weight:600;font-size:12px;color:var(--muted)}
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.02);font-weight:600;color:var(--muted)}
+
+    footer{padding:28px 0;color:var(--muted);text-align:center}
+
+    @media (max-width:900px){nav{display:none}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">AT</div>
+        <div>
+          <div style="font-weight:800">Anwar Hakim Tamim</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Microelectronics & Semiconductor Engineering</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Hi — I'm Anwar Hakim Tamim</h1>
+      <p>Buffalo, NY, USA | <a href="mailto:anwarhak@buffalo.edu" style="color:var(--accent)">anwarhak@buffalo.edu</a> | <a href="https://linkedin.com/in/anwarhakimtamim" style="color:var(--accent)">LinkedIn</a> | +1 929-372-2666</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>University at Buffalo, SUNY</h3>
+          <p class="sub">MS, Microelectronics & Semiconductor Engineering (Aug 2024 – Dec 2025)<br>CGPA: 3.857</p>
+        </div>
+        <div class="card">
+          <h3>Ahsanullah University of Science and Technology</h3>
+          <p class="sub">BS, Electrical & Electronic Engineering (Mar 2018 – Dec 2022)<br>CGPA: 3.12</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Cleanroom Technician – Graduate Assistant</h3>
+          <p class="sub">Davis Hall Cleanroom ISO-6, University at Buffalo (Jan 2025 – Present)</p>
+          <ul>
+            <li>Process characterization on mask aligner, optimizing exposure & development.</li>
+            <li>Maintenance on E-Beam Evaporator, Sputtering, and Profilometer.</li>
+            <li>Spin coater maintenance, sonication cleaning, vapor priming, and RIE plasma cleaning.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Graduate Teaching Assistant – Microfabrication Lab</h3>
+          <p class="sub">University at Buffalo (Jan 2025 – May 2025)</p>
+          <ul>
+            <li>Guided students in photolithography, thin film deposition, and metrology.</li>
+            <li>Supported tool operations like e-beam evaporator and spin coater.</li>
+            <li>Conducted TCAD simulation sessions on thermal oxidation & ion implantation.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Research Assistant</h3>
+          <p class="sub">Emerging Nanoelectronics Research Group, UB (Feb 2025 – Aug 2025)</p>
+          <ul>
+            <li>Strain and structural analysis of MoS₂ layers using COMSOL.</li>
+            <li>Collaborated with faculty on experimental setup and data validation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Ion Implantation Simulation (MATLAB)</h3>
+          <p class="sub">Simulated ion implantation in silicon with Gaussian depth profiles inspired by SRIM. Modeled diffusion broadening due to annealing.</p>
+        </div>
+        <div class="card">
+          <h3>Photolithography & Image Reversal Process</h3>
+          <p class="sub">Executed wafer photolithography with positive and image-reversal resists using Karl Suss MA6/BA6. Analyzed defects and optimized parameters.</p>
+        </div>
+        <div class="card">
+          <h3>SPC for Semiconductor Manufacturing</h3>
+          <p class="sub">Conducted SPC case studies on processes like Thermal Oxidation and Ion Implantation. Used Minitab to analyze CpK and process capability.</p>
+        </div>
+        <div class="card">
+          <h3>Thermal Oxidation & Ion Implantation Simulation</h3>
+          <p class="sub">Modeled SiO₂ growth using Silvaco TCAD, evaluating doping concentration and crystal orientation impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Semiconductor Skills</h2>
+      <div class="skills">
+        <div class="skill">Cleanroom Protocols (ISO-6)</div>
+        <div class="skill">E-Beam Evaporation</div>
+        <div class="skill">Sputter Deposition</div>
+        <div class="skill">Photolithography (Spin Coating, Mask Aligner)</div>
+        <div class="skill">Etching (RIE, HF, RCA)</div>
+        <div class="skill">Thermal Oxidation (Silvaco)</div>
+        <div class="skill">Profilometry & Ellipsometry</div>
+        <div class="skill">Vacuum Systems</div>
+        <div class="skill">COMSOL Multiphysics</div>
+        <div class="skill">Silvaco TCAD</div>
+        <div class="skill">Matlab</div>
+        <div class="skill">Python</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="sub">Email: <a href="mailto:anwarhak@buffalo.edu" style="color:var(--accent)">anwarhak@buffalo.edu</a><br>Phone: +1 929-372-2666<br>Location: Buffalo, NY, USA<br><a href="https://linkedin.com/in/anwarhakimtamim" style="color:var(--accent)">LinkedIn</a></p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Anwar Hakim Tamim — Built with care.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
