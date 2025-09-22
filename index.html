@@ -1,29 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head>
-  ...
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Anwar Hakim Tamim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio of Anwar Hakim Tamim — Microelectronics & Semiconductor Engineering." />
   <style>
     :root{
       --bg:#0a0f1a; --card:#111827; --muted:#94a3b8; --accent:#00f7ff; --glass: rgba(0,247,255,0.08);
       --maxw:1100px;
       color-scheme: dark;
     }
-
     *{box-sizing:border-box}
-
-    /* Replace this part */
+    
     html, body {
       height: 100%;
       margin: 0;
       font-family: Inter, system-ui, -apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
       color: #e6eef6;
-
-      /* Semiconductor wafer background */
       background: url("742b87b2-d10a-4a9b-848a-dccba58c4ba0.png") no-repeat center center fixed;
       background-size: cover;
     }
 
-    /* Add overlay so text is readable */
+    /* Overlay for readability */
     body::before {
       content: "";
       position: fixed;
@@ -31,21 +33,50 @@
       background: rgba(0, 0, 0, 0.7);
       z-index: -1;
     }
-    ...
+
+    .container{width:90%;max-width:var(--maxw);margin:0 auto;padding:48px 0}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;gap:14px;align-items:center}
+    .logo img{width:60px;height:60px;border-radius:50%;border:2px solid var(--accent);object-fit:cover;box-shadow:0 0 15px rgba(0,247,255,0.4)}
+    .logo-text{font-family:Orbitron,sans-serif}
+    .logo-text div:first-child{font-weight:800;font-size:20px;color:var(--accent)}
+    .logo-text div:last-child{font-size:12px;color:var(--muted);margin-top:2px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    .hero{margin:48px 0;text-align:center}
+    .hero h1{font-size:38px;margin:0 0 12px;font-family:Orbitron,sans-serif;color:var(--accent)}
+    .hero p{margin:0;color:var(--muted)}
+
+    section{margin:48px 0}
+    h2{margin:0 0 12px;font-size:24px;font-family:Orbitron,sans-serif;color:var(--accent)}
+    .sub{color:var(--muted);margin-bottom:18px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+    .card{background:var(--card);padding:20px;border-radius:12px;border:1px solid rgba(0,247,255,0.1);box-shadow:0 0 12px rgba(0,247,255,0.05)}
+    .card h3{margin:0 0 8px;font-size:18px;color:var(--accent);font-family:Orbitron,sans-serif}
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{padding:10px 12px;border-radius:10px;background:rgba(0,247,255,0.05);font-weight:600;color:var(--muted);border:1px solid rgba(0,247,255,0.08)}
+
+    footer{padding:28px 0;color:var(--muted);text-align:center;font-size:14px;border-top:1px solid rgba(0,247,255,0.1)}
+
+    @media (max-width:900px){nav{display:none}}
   </style>
 </head>
 <body>
   <div class="container">
     <header>
       <div class="logo">
-        <img src="rolext.jpg" alt="Anwar Hakim Tamim">
+        <img src="https://raw.githubusercontent.com/anwarhakimtamim/anwarhakimtamim.github.io/refs/heads/main/tamim.jpg" alt="Anwar Hakim Tamim">
         <div class="logo-text">
           <div>Anwar Hakim Tamim</div>
           <div>Microelectronics & Semiconductor Engineering</div>
         </div>
       </div>
       <nav>
-        <a href="/education">Education</a>
+        <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -54,7 +85,7 @@
     </header>
 
     <section class="hero">
-      <h1>Welcome, and thanks for visiting! I’m Anwar Hakim Tamim — here’s a little about my journey in semiconductors, technologies and beyond.</h1>
+      <h1>Hi — I'm Anwar Hakim Tamim</h1>
       <p>Buffalo, NY, USA | <a href="mailto:anwarhak@buffalo.edu" style="color:var(--accent)">anwarhak@buffalo.edu</a> | <a href="https://linkedin.com/in/anwarhakimtamim" style="color:var(--accent)">LinkedIn</a> | +1 929-372-2666</p>
     </section>
 
