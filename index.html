@@ -1,189 +1,146 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio — Anwar Hakim Tamim</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <meta name="description" content="Portfolio of Anwar Hakim Tamim — Microelectronics & Semiconductor Engineering." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anwar Hakim Tamim — E-Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0a0f1a; --card:#111827; --muted:#94a3b8; --accent:#00f7ff; --glass: rgba(0,247,255,0.08);
-      --maxw:1100px;
-      color-scheme: dark;
-    }
-    *{box-sizing:border-box}
-    
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
-      font-family: Inter, system-ui, -apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
-      color: #e6eef6;
-      background: url("742b87b2-d10a-4a9b-848a-dccba58c4ba0.png") no-repeat center center fixed;
-      background-size: cover;
+      font-family: Inter, sans-serif;
+      color: #222;
+      background: #f0f2f5 url('https://www.transparenttextures.com/patterns/cubes.png');
+      line-height: 1.6;
     }
-
-    /* Overlay for readability */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: -1;
+    header {
+      background: #ffffffcc;
+      backdrop-filter: blur(6px);
+      padding: 15px 10%;
+      border-bottom: 1px solid #d1d5db;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    .container{width:90%;max-width:var(--maxw);margin:0 auto;padding:48px 0}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .logo{display:flex;gap:14px;align-items:center}
-    .logo img{width:60px;height:60px;border-radius:50%;border:2px solid var(--accent);object-fit:cover;box-shadow:0 0 15px rgba(0,247,255,0.4)}
-    .logo-text{font-family:Orbitron,sans-serif}
-    .logo-text div:first-child{font-weight:800;font-size:20px;color:var(--accent)}
-    .logo-text div:last-child{font-size:12px;color:var(--muted);margin-top:2px}
-    nav{display:flex;gap:18px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600}
-    nav a:hover{color:var(--accent)}
-
-    .hero{margin:48px 0;text-align:center}
-    .hero h1{font-size:38px;margin:0 0 12px;font-family:Orbitron,sans-serif;color:var(--accent)}
-    .hero p{margin:0;color:var(--muted)}
-
-    section{margin:48px 0}
-    h2{margin:0 0 12px;font-size:24px;font-family:Orbitron,sans-serif;color:var(--accent)}
-    .sub{color:var(--muted);margin-bottom:18px}
-
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-    .card{background:var(--card);padding:20px;border-radius:12px;border:1px solid rgba(0,247,255,0.1);box-shadow:0 0 12px rgba(0,247,255,0.05)}
-    .card h3{margin:0 0 8px;font-size:18px;color:var(--accent);font-family:Orbitron,sans-serif}
-
-    .skills{display:flex;flex-wrap:wrap;gap:10px}
-    .skill{padding:10px 12px;border-radius:10px;background:rgba(0,247,255,0.05);font-weight:600;color:var(--muted);border:1px solid rgba(0,247,255,0.08)}
-
-    footer{padding:28px 0;color:var(--muted);text-align:center;font-size:14px;border-top:1px solid rgba(0,247,255,0.1)}
-
-    @media (max-width:900px){nav{display:none}}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #ddd;
+      border: 2px solid #9ca3af;
+    }
+    .logo-text {
+      font-size: 20px;
+      font-weight: 600;
+      color: #111;
+    }
+    nav {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      flex-wrap: nowrap; /* Prevent wrapping */
+    }
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      font-size: 14px; /* Smaller font size for nav links */
+      white-space: nowrap; /* Ensure text stays on one line */
+    }
+    nav a:hover {
+      color: #000;
+    }
+    .special-link {
+      font-family: Orbitron, sans-serif;
+      font-weight: 700;
+      color: #111;
+      font-size: 15px; /* Slightly larger for distinction */
+    }
+    .italic-link {
+      font-style: italic;
+    }
+    .hero {
+      text-align: center;
+      padding: 70px 10%;
+      background: linear-gradient(180deg, #d6d8db, #eceff1); /* Slightly darker gradient */
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: 34px;
+      color: #111;
+    }
+    .hero p {
+      margin-top: 12px;
+      color: #333; /* Darker subtitle */
+    }
+    section {
+      padding: 50px 10%;
+      background: #ffffffdd;
+      backdrop-filter: blur(4px);
+      margin: 40px auto;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #222;
+      border-left: 4px solid #9ca3af;
+      padding-left: 10px;
+    }
+    section p {
+      color: #444;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 14px;
+      border-top: 1px solid #d1d5db;
+      background: #f9fafb;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">
-        <img src="https://raw.githubusercontent.com/anwarhakimtamim/anwarhakimtamim.github.io/refs/heads/main/tamim.jpg" alt="Anwar Hakim Tamim">
-        <div class="logo-text">
-          <div>Anwar Hakim Tamim</div>
-          <div>Microelectronics & Semiconductor Engineering</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <img src="" alt="rolext.jpg">
+      <div class="logo-text">Anwar Hakim Tamim</div>
+    </div>
+    <nav>
+      <a href="#story" class="special-link">Semiconductor Story</a>
+      <a href="#education">Education</a>
+      <a href="#resume">Resume</a>
+      <a href="#courses">Courses</a>
+      <a href="#integrated">Integrated Learning</a>
+      <a href="#citation">Citation</a>
+      <a href="#mystories" class="italic-link">My Stories</a>
+    </nav>
+  </header>
 
-    <section class="hero">
-      <h1>Hi — I'm Anwar Hakim Tamim</h1>
-      <p>Buffalo, NY, USA | <a href="mailto:anwarhak@buffalo.edu" style="color:var(--accent)">anwarhak@buffalo.edu</a> | <a href="https://linkedin.com/in/anwarhakimtamim" style="color:var(--accent)">LinkedIn</a> | +1 929-372-2666</p>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>University at Buffalo, SUNY</h3>
-          <p class="sub">MS, Microelectronics & Semiconductor Engineering (Aug 2024 – Dec 2025)<br>CGPA: 3.857</p>
-        </div>
-        <div class="card">
-          <h3>Ahsanullah University of Science and Technology</h3>
-          <p class="sub">BS, Electrical & Electronic Engineering (Mar 2018 – Dec 2022)<br>CGPA: 3.12</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <h2>Work Experience</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Cleanroom Technician – Graduate Assistant</h3>
-          <p class="sub">Davis Hall Cleanroom ISO-6, University at Buffalo (Jan 2025 – Present)</p>
-          <ul>
-            <li>Process characterization on mask aligner, optimizing exposure & development.</li>
-            <li>Maintenance on E-Beam Evaporator, Sputtering, and Profilometer.</li>
-            <li>Spin coater maintenance, sonication cleaning, vapor priming, and RIE plasma cleaning.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Graduate Teaching Assistant – Microfabrication Lab</h3>
-          <p class="sub">University at Buffalo (Jan 2025 – May 2025)</p>
-          <ul>
-            <li>Guided students in photolithography, thin film deposition, and metrology.</li>
-            <li>Supported tool operations like e-beam evaporator and spin coater.</li>
-            <li>Conducted TCAD simulation sessions on thermal oxidation & ion implantation.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Research Assistant</h3>
-          <p class="sub">Emerging Nanoelectronics Research Group, UB (Feb 2025 – Aug 2025)</p>
-          <ul>
-            <li>Strain and structural analysis of MoS₂ layers using COMSOL.</li>
-            <li>Collaborated with faculty on experimental setup and data validation.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Ion Implantation Simulation (MATLAB)</h3>
-          <p class="sub">Simulated ion implantation in silicon with Gaussian depth profiles inspired by SRIM. Modeled diffusion broadening due to annealing.</p>
-        </div>
-        <div class="card">
-          <h3>Photolithography & Image Reversal Process</h3>
-          <p class="sub">Executed wafer photolithography with positive and image-reversal resists using Karl Suss MA6/BA6. Analyzed defects and optimized parameters.</p>
-        </div>
-        <div class="card">
-          <h3>SPC for Semiconductor Manufacturing</h3>
-          <p class="sub">Conducted SPC case studies on processes like Thermal Oxidation and Ion Implantation. Used Minitab to analyze CpK and process capability.</p>
-        </div>
-        <div class="card">
-          <h3>Thermal Oxidation & Ion Implantation Simulation</h3>
-          <p class="sub">Modeled SiO₂ growth using Silvaco TCAD, evaluating doping concentration and crystal orientation impact.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2>Semiconductor Skills</h2>
-      <div class="skills">
-        <div class="skill">Cleanroom Protocols (ISO-6)</div>
-        <div class="skill">E-Beam Evaporation</div>
-        <div class="skill">Sputter Deposition</div>
-        <div class="skill">Photolithography (Spin Coating, Mask Aligner)</div>
-        <div class="skill">Etching (RIE, HF, RCA)</div>
-        <div class="skill">Thermal Oxidation (Silvaco)</div>
-        <div class="skill">Profilometry & Ellipsometry</div>
-        <div class="skill">Vacuum Systems</div>
-        <div class="skill">COMSOL Multiphysics</div>
-        <div class="skill">Silvaco TCAD</div>
-        <div class="skill">Matlab</div>
-        <div class="skill">Python</div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="sub">Email: <a href="mailto:anwarhak@buffalo.edu" style="color:var(--accent)">anwarhak@buffalo.edu</a><br>Phone: +1 929-372-2666<br>Location: Buffalo, NY, USA<br><a href="https://linkedin.com/in/anwarhakimtamim" style="color:var(--accent)">LinkedIn</a></p>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Anwar Hakim Tamim — Built with care.
-    </footer>
+  <div class="hero">
+    <h1>Welcome to My Portfolio Website</h1>
+    <p>Graduate Student • Microelectronics & Semiconductor Engineering</p>
   </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! My name is <strong>Anwar Hakim Tamim</strong>, and I am currently a graduate student pursuing a <strong>Master of Science in Microelectronics and Semiconductor Engineering at the University at Buffalo</strong>. I completed my <strong>Bachelor’s degree in Electrical and Electronic Engineering</strong> at Ahsanullah University of Science and Technology in Bangladesh. I have always been motivated by curiosity and the drive to understand how things work, which has shaped my academic journey and enabled me to bridge the gap between theoretical device physics and hands-on semiconductor fabrication.</p>
+
+    <p>My academic focus is in <strong>semiconductor process engineering</strong>, and I aspire to build a career in the <strong>semiconductor industry</strong> as a <strong>process or equipment engineer</strong>. My goal is to contribute to the <strong>design, implementation, and optimization of fabrication processes</strong> that enhance device performance, reliability, and scalability in advanced technology manufacturing.</p>
+
+    <p>Outside of academics, I enjoy <strong>DIY projects</strong>, whether it’s tuning up my bicycle to keep it running smoothly or repairing everyday items around the house when they break. I like the challenge of figuring out how things work, troubleshooting problems, and finding practical solutions—and arranging those solutions by making the best use of the resources available to me. In my free time, I also love playing <strong>soccer</strong>, enjoying <strong>table tennis matches</strong>, and watching <strong>superhero movies</strong>, which help me recharge and stay balanced.</p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Anwar Hakim Tamim — Portfolio
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
