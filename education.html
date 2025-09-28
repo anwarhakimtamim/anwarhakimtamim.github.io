@@ -18,13 +18,29 @@
       backdrop-filter: blur(6px);
       padding: 15px 10%;
       border-bottom: 1px solid #d1d5db;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .logo-text {
       font-size: 24px;
       font-weight: 700;
       color: #111;
       font-family: Orbitron, sans-serif;
+    }
+    nav {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    nav a:hover {
+      color: #000;
     }
     .hero {
       text-align: center;
@@ -81,6 +97,15 @@
 <body>
   <header>
     <div class="logo-text">Anwar Hakim Tamim — Education</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="education.html">Education</a>
+      <a href="resume.html">Resume</a>
+      <a href="courses.html">Courses</a>
+      <a href="integrated.html">Integrated Learning</a>
+      <a href="citation.html">Citation</a>
+      <a href="mystories.html">My Stories</a>
+    </nav>
   </header>
 
   <div class="hero">
@@ -92,7 +117,7 @@
 
     <div class="edu-card">
       <h3>University at Buffalo, State University of New York, USA</h3>
-      <p><strong>Master of Science in Engineering Sciences - Microelectronics & Semiconductor Engineering</strong></p>
+      <p><strong>Master of Science in Engineering Sciences (Microelectronics & Semiconductor Engineering)</strong></p>
       <p>Aug 2024 – Dec 2025 | CGPA: 3.86</p>
     </div>
 
