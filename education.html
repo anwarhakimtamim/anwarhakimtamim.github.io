@@ -1,105 +1,117 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anwar Hakim Tamim — Education</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <meta name="description" content="Education profile — Anwar Hakim Tamim" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Education — Anwar Hakim Tamim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#071022;--card:#0b1320;--muted:#93a6b8;--accent:#00e5ff}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#020613 0%,#081426 100%);color:#e6f0fb}
-    .wrap{max-width:900px;margin:40px auto;padding:28px}
-    header{display:flex;align-items:center;gap:18px}
-    header img{width:84px;height:84px;border-radius:10px;object-fit:cover;border:2px solid rgba(0,229,255,0.12)}
-    header h1{font-family:Orbitron,monospace;color:var(--accent);margin:0;font-size:26px}
-    header p{margin:2px 0 0;color:var(--muted)}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(0,229,255,0.06);padding:18px;border-radius:12px;margin-top:22px}
-    .school{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
-    .school .left{max-width:68%}
-    .school h2{margin:0;color:var(--accent);font-family:Orbitron,monospace}
-    .muted{color:var(--muted);font-size:14px}
-    .meta{font-weight:600;color:#cfefff}
-    .cgpa{background:rgba(0,229,255,0.08);padding:6px 10px;border-radius:8px;border:1px solid rgba(0,229,255,0.12);font-weight:700}
-    .timeline{margin-top:16px;border-left:2px solid rgba(0,229,255,0.06);padding-left:18px}
-    .course-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin-top:12px}
-    .course{background:rgba(255,255,255,0.02);padding:8px;border-radius:8px;font-size:14px;color:var(--muted)}
-    footer{margin-top:30px;color:var(--muted);font-size:13px;text-align:center}
-
-    @media(max-width:640px){header{flex-direction:column;align-items:flex-start} .school .left{max-width:100%}}
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      color: #222;
+      background: #f0f2f5 url('https://www.transparenttextures.com/patterns/cubes.png');
+      line-height: 1.6;
+    }
+    header {
+      background: #ffffffcc;
+      backdrop-filter: blur(6px);
+      padding: 15px 10%;
+      border-bottom: 1px solid #d1d5db;
+      text-align: center;
+    }
+    .logo-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111;
+      font-family: Orbitron, sans-serif;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 10%;
+      background: linear-gradient(180deg, #d6d8db, #eceff1);
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #111;
+    }
+    section {
+      padding: 50px 10%;
+      background: #ffffffdd;
+      backdrop-filter: blur(4px);
+      margin: 40px auto;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #222;
+      border-left: 4px solid #9ca3af;
+      padding-left: 10px;
+    }
+    .edu-card {
+      margin-bottom: 25px;
+      padding: 15px;
+      border-left: 3px solid #9ca3af;
+      background: #fafafa;
+      border-radius: 8px;
+    }
+    .edu-card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #111;
+    }
+    .edu-card p {
+      margin: 5px 0 0;
+      color: #444;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 14px;
+      border-top: 1px solid #d1d5db;
+      background: #f9fafb;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <img src="https://raw.githubusercontent.com/anwarhakimtamim/anwarhakimtamim.github.io/refs/heads/main/tamim.jpg" alt="Anwar photo">
-      <div>
-        <h1>Anwar Hakim Tamim</h1>
-        <p class="muted">Buffalo, NY, USA • anwarhak@buffalo.edu • +1 929-372-2666</p>
-      </div>
-    </header>
+  <header>
+    <div class="logo-text">Anwar Hakim Tamim — Education</div>
+  </header>
 
-    <div class="card">
-      <div class="school">
-        <div class="left">
-          <h2>University at Buffalo, State University of New York</h2>
-          <p class="muted">MS — Microelectronics & Semiconductor Engineering</p>
-          <p class="meta">Aug 2024 — Dec 2025</p>
-          <div style="margin-top:10px">
-            <span class="cgpa">CGPA: 3.857</span>
-          </div>
-          <div class="timeline">
-            <p class="muted">Relevant coursework & highlights:</p>
-            <div class="course-list">
-              <div class="course">Microelectronic Fabrication Lab</div>
-              <div class="course">Microelectronic Device Fabrication</div>
-              <div class="course">Fundamentals of Semiconductor Devices</div>
-              <div class="course">Solid State Sensors</div>
-              <div class="course">Fundamentals of Modern VLSI Devices</div>
-              <div class="course">RF / Microwave Circuits</div>
-            </div>
-          </div>
-        </div>
-        <div class="right" style="text-align:right">
-          <p class="muted">Location</p>
-          <p class="meta">Buffalo, NY, USA</p>
-          <p style="margin-top:14px;color:var(--muted)">Expected graduation: <strong style="color:#cfefff">Dec 2025</strong></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="school">
-        <div class="left">
-          <h2>Ahsanullah University of Science and Technology</h2>
-          <p class="muted">BS — Electrical & Electronic Engineering</p>
-          <p class="meta">Mar 2018 — Dec 2022</p>
-          <div style="margin-top:10px">
-            <span class="cgpa">CGPA: 3.12</span>
-          </div>
-          <div class="timeline">
-            <p class="muted">Selected coursework:</p>
-            <div class="course-list">
-              <div class="course">Analog Integrated Circuits</div>
-              <div class="course">Digital Integrated Circuits</div>
-              <div class="course">Consumer Optoelectronics</div>
-              <div class="course">RF / Microwave basics</div>
-            </div>
-          </div>
-        </div>
-        <div class="right" style="text-align:right">
-          <p class="muted">Location</p>
-          <p class="meta">Dhaka, Bangladesh</p>
-        </div>
-      </div>
-    </div>
-
-    <footer>
-      <div class="muted">Printable & shareable education page — customize or export to PDF for applications.</div>
-    </footer>
+  <div class="hero">
+    <h1>My Education</h1>
   </div>
+
+  <section id="education">
+    <h2>Academic Background</h2>
+
+    <div class="edu-card">
+      <h3>University at Buffalo, State University of New York, USA</h3>
+      <p><strong>Master of Science in Engineering Sciences - Microelectronics & Semiconductor Engineering</strong></p>
+      <p>Aug 2024 – Dec 2025 | CGPA: 3.86</p>
+    </div>
+
+    <div class="edu-card">
+      <h3>Ahsanullah University of Science and Technology, Bangladesh</h3>
+      <p><strong>Bachelor of Science in Electrical and Electronic Engineering</strong></p>
+      <p>Mar 2018 – Dec 2022 | CGPA: 3.12</p>
+    </div>
+
+    <h2>Relevant Coursework</h2>
+    <p>Microelectronic Fabrication Lab, Microelectronic Device Fabrication, Fundamentals of Semiconductor Devices, Solid State Sensors, Fundamentals of Modern VLSI Devices, RF/Microwave Circuits, Analog Integrated Circuits, Digital Integrated Circuits, Consumer Optoelectronics.</p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Anwar Hakim Tamim — Education Page
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
