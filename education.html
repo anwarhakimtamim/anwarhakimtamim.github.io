@@ -16,11 +16,12 @@
     header {
       background: #ffffffcc;
       backdrop-filter: blur(6px);
-      padding: 15px 10%;
+      padding: 15px 5%;
       border-bottom: 1px solid #d1d5db;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
     .logo-text {
       font-size: 24px;
@@ -32,12 +33,14 @@
       display: flex;
       gap: 15px;
       align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       text-decoration: none;
       color: #444;
       font-weight: 500;
       font-size: 14px;
+      white-space: nowrap;
     }
     nav a:hover {
       color: #000;
@@ -53,16 +56,16 @@
       color: #111;
     }
     section {
-      padding: 50px 10%;
+      padding: 40px 8%;
       background: #ffffffdd;
       backdrop-filter: blur(4px);
-      margin: 40px auto;
+      margin: 30px auto;
       border-radius: 12px;
       max-width: 900px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
     section h2 {
-      font-size: 22px;
+      font-size: 20px;
       margin-bottom: 20px;
       color: #222;
       border-left: 4px solid #9ca3af;
@@ -91,6 +94,29 @@
       font-size: 14px;
       border-top: 1px solid #d1d5db;
       background: #f9fafb;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 10px;
+      }
+      .hero h1 {
+        font-size: 26px;
+      }
+      section {
+        padding: 20px 5%;
+        margin: 20px;
+      }
+      section h2 {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
