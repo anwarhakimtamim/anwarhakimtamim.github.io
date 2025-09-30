@@ -37,16 +37,16 @@
     }
     nav a {
       text-decoration: none;
-      color: #444;
+      color: #333;
       font-weight: 600;
       font-size: 15px;
       white-space: nowrap;
-      padding: 8px 12px;
+      padding: 10px 14px;
       border-radius: 6px;
       transition: background 0.2s ease, color 0.2s ease;
     }
     nav a:hover {
-      background: #f0f2f5;
+      background: #e5e7eb;
       color: #000;
     }
     /* Hamburger menu */
@@ -54,10 +54,10 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
-      gap: 4px;
+      gap: 5px;
     }
     .menu-toggle div {
-      width: 25px;
+      width: 28px;
       height: 3px;
       background: #333;
       transition: all 0.3s ease;
@@ -78,33 +78,38 @@
       nav {
         display: none;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
         width: 100%;
         margin-top: 10px;
         background: #ffffffee;
         border: 1px solid #ddd;
         border-radius: 8px;
-        padding: 10px;
+        padding: 0;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        font-size: 15px;
       }
       nav a {
         width: 100%;
-        padding: 10px;
+        padding: 14px 18px;
         font-size: 16px;
         font-weight: 500;
         border-bottom: 1px solid #eee;
+        color: #333;
+        background: #fff;
+      }
+      nav a:hover {
+        background: #f0f2f5;
+        color: #000;
       }
       nav a:last-child {
         border-bottom: none;
       }
       nav.show {
         display: flex;
-        animation: fadeIn 0.3s ease-in-out;
+        animation: fadeIn 0.25s ease-in-out;
       }
     }
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-10px);}
+      from {opacity: 0; transform: translateY(-5px);}
       to {opacity: 1; transform: translateY(0);}
     }
     .hero {
@@ -157,7 +162,6 @@
       <div></div>
     </div>
     <nav>
-      <a href="index.html">Home</a>
       <a href="education.html">Education</a>
       <a href="resume.html">Resume</a>
       <a href="courses.html">Courses</a>
