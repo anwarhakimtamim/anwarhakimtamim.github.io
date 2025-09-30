@@ -21,7 +21,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
     }
     .logo-text {
       font-size: 24px;
@@ -44,6 +43,48 @@
     }
     nav a:hover {
       color: #000;
+    }
+    /* Hamburger menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: #333;
+      transition: all 0.3s ease;
+    }
+    .menu-toggle.active div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle.active div:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 10px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+      nav.show {
+        display: flex;
+      }
     }
     .hero {
       text-align: center;
@@ -95,34 +136,16 @@
       border-top: 1px solid #d1d5db;
       background: #f9fafb;
     }
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        margin-top: 10px;
-      }
-      .hero h1 {
-        font-size: 26px;
-      }
-      section {
-        padding: 20px 5%;
-        margin: 20px;
-      }
-      section h2 {
-        font-size: 18px;
-      }
-    }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-text">Anwar Hakim Tamim — Education</div>
+    <div class="menu-toggle" onclick="this.classList.toggle('active'); document.querySelector('nav').classList.toggle('show')">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="education.html">Education</a>
