@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Education — Anwar Hakim Tamim</title>
+  <title>Home — Anwar Hakim Tamim</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -21,6 +21,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
     .logo-text {
       font-size: 24px;
@@ -36,12 +37,16 @@
     }
     nav a {
       text-decoration: none;
-      color: #444;
-      font-weight: 500;
-      font-size: 14px;
+      color: #333;
+      font-weight: 600;
+      font-size: 15px;
       white-space: nowrap;
+      padding: 10px 14px;
+      border-radius: 6px;
+      transition: background 0.2s ease, color 0.2s ease;
     }
     nav a:hover {
+      background: #e5e7eb;
       color: #000;
     }
     /* Hamburger menu */
@@ -49,10 +54,10 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
-      gap: 4px;
+      gap: 5px;
     }
     .menu-toggle div {
-      width: 25px;
+      width: 28px;
       height: 3px;
       background: #333;
       transition: all 0.3s ease;
@@ -73,18 +78,39 @@
       nav {
         display: none;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
         width: 100%;
         margin-top: 10px;
-        background: #fff;
+        background: #ffffffee;
         border: 1px solid #ddd;
         border-radius: 8px;
-        padding: 10px;
+        padding: 0;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+      nav a {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 16px;
+        font-weight: 500;
+        border-bottom: 1px solid #eee;
+        color: #333;
+        background: #fff;
+      }
+      nav a:hover {
+        background: #f0f2f5;
+        color: #000;
+      }
+      nav a:last-child {
+        border-bottom: none;
       }
       nav.show {
         display: flex;
+        animation: fadeIn 0.25s ease-in-out;
       }
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-5px);}
+      to {opacity: 1; transform: translateY(0);}
     }
     .hero {
       text-align: center;
@@ -95,6 +121,11 @@
       margin: 0;
       font-size: 32px;
       color: #111;
+    }
+    .hero p {
+      margin-top: 10px;
+      color: #555;
+      font-size: 16px;
     }
     section {
       padding: 40px 8%;
@@ -112,22 +143,6 @@
       border-left: 4px solid #9ca3af;
       padding-left: 10px;
     }
-    .edu-card {
-      margin-bottom: 25px;
-      padding: 15px;
-      border-left: 3px solid #9ca3af;
-      background: #fafafa;
-      border-radius: 8px;
-    }
-    .edu-card h3 {
-      margin: 0;
-      font-size: 18px;
-      color: #111;
-    }
-    .edu-card p {
-      margin: 5px 0 0;
-      color: #444;
-    }
     footer {
       text-align: center;
       padding: 20px;
@@ -140,7 +155,7 @@
 </head>
 <body>
   <header>
-    <div class="logo-text">Anwar Hakim Tamim — Education</div>
+    <div class="logo-text">Anwar Hakim Tamim — Home</div>
     <div class="menu-toggle" onclick="this.classList.toggle('active'); document.querySelector('nav').classList.toggle('show')">
       <div></div>
       <div></div>
@@ -158,30 +173,21 @@
   </header>
 
   <div class="hero">
-    <h1>My Education</h1>
+    <h1>Welcome to My E-Portfolio Website</h1>
+    <p>Graduate Student • Microelectronics & Semiconductor Engineering</p>
   </div>
 
-  <section id="education">
-    <h2>Academic Background</h2>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! My name is <strong>Anwar Hakim Tamim</strong>, and I am currently a graduate student pursuing a <strong>Master of Science in Microelectronics and Semiconductor Engineering at the University at Buffalo</strong>. I completed my <strong>Bachelor’s degree in Electrical and Electronic Engineering</strong> at Ahsanullah University of Science and Technology in Bangladesh. I have always been motivated by curiosity and the drive to understand how things work, which has shaped my academic journey and enabled me to bridge the gap between theoretical device physics and hands-on semiconductor fabrication.</p>
 
-    <div class="edu-card">
-      <h3>University at Buffalo, State University of New York, USA</h3>
-      <p><strong>Master of Science in Engineering Sciences (Microelectronics & Semiconductor Engineering)</strong></p>
-      <p>Aug 2024 – Dec 2025 | CGPA: 3.86</p>
-    </div>
+    <p>My academic focus is in <strong>semiconductor process engineering</strong>, and I aspire to build a career in the <strong>semiconductor industry</strong> as a <strong>process or equipment engineer</strong>. My goal is to contribute to the <strong>design, implementation, and optimization of fabrication processes</strong> that enhance device performance, reliability, and scalability in advanced technology manufacturing.</p>
 
-    <div class="edu-card">
-      <h3>Ahsanullah University of Science and Technology, Bangladesh</h3>
-      <p><strong>Bachelor of Science in Electrical and Electronic Engineering</strong></p>
-      <p>Mar 2018 – Dec 2022 | CGPA: 3.12</p>
-    </div>
-
-    <h2>Relevant Coursework</h2>
-    <p>Microelectronic Fabrication Lab, Microelectronic Device Fabrication, Fundamentals of Semiconductor Devices, Solid State Sensors, Fundamentals of Modern VLSI Devices, RF/Microwave Circuits, Analog Integrated Circuits, Digital Integrated Circuits, Consumer Optoelectronics.</p>
+    <p>Outside of academics, I enjoy <strong>DIY projects</strong>, whether it’s tuning up my bicycle to keep it running smoothly or repairing everyday items around the house when they break. I like the challenge of figuring out how things work, troubleshooting problems, and finding practical solutions—and arranging those solutions by making the best use of the resources available to me. In my free time, I also love playing <strong>soccer</strong>, enjoying <strong>table tennis matches</strong>, and watching <strong>superhero movies</strong>, which help me recharge and stay balanced.</p>
   </section>
 
   <footer>
-    © <span id="year"></span> Anwar Hakim Tamim — Education Page
+    © <span id="year"></span> Anwar Hakim Tamim — Home Page
   </footer>
 
   <script>
