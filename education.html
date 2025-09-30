@@ -8,16 +8,18 @@
   <style>
     /* --- Base / Theme --- */
     body { margin: 0; font-family: Inter, sans-serif; color: #222; background: #f0f2f5 url('https://www.transparenttextures.com/patterns/cubes.png'); line-height: 1.6; }
-    a { color: inherit; }
+    a { color: inherit; text-decoration: none; }
 
     /* --- Header & Nav --- */
     header { background: #ffffffcc; backdrop-filter: blur(6px); padding: 15px 5%; border-bottom: 1px solid #d1d5db; display: flex; justify-content: space-between; align-items: center; position: relative; }
     .logo-text { font-size: 24px; font-weight: 700; color: #111; font-family: Orbitron, sans-serif; }
+    .logo-text a { color: inherit; text-decoration: none; }
     nav { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
     nav a { text-decoration: none; color: #333; font-weight: 600; font-size: 15px; white-space: nowrap; padding: 10px 14px; border-radius: 6px; transition: background 0.2s ease, color 0.2s ease; }
     nav a:hover { background: #e5e7eb; color: #000; }
+    nav a.active { font-weight: 700; color: #000; }
 
-    /* --- Mobile Hamburger (simple, the version you liked) --- */
+    /* --- Mobile Hamburger --- */
     .menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
     .menu-toggle div { width: 28px; height: 3px; background: #333; transition: all 0.3s ease; }
     .menu-toggle.active div:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
@@ -50,15 +52,14 @@
   </style>
 </head>
 <body>
-  <!-- Header with Home + section links -->
+  <!-- Header with clickable name linking to Home -->
   <header>
-    <div class="logo-text">Anwar Hakim Tamim — Education</div>
+    <div class="logo-text"><a href="index.html">Anwar Hakim Tamim</a></div>
     <div class="menu-toggle" onclick="this.classList.toggle('active'); document.querySelector('nav').classList.toggle('show')">
       <div></div><div></div><div></div>
     </div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="education.html">Education</a>
+      <a href="education.html" class="active">Education</a>
       <a href="resume.html">Resume</a>
       <a href="courses.html">Courses</a>
       <a href="integrated.html">Integrated Learning</a>
@@ -72,7 +73,7 @@
     <h1>My Education</h1>
   </div>
 
-  <!-- Education content only (no About Me here) -->
+  <!-- Education content only -->
   <section id="education">
     <h2>Academic Background</h2>
 
