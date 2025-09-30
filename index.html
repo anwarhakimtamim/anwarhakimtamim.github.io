@@ -21,6 +21,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
     .logo-text {
       font-size: 24px;
@@ -37,11 +38,15 @@
     nav a {
       text-decoration: none;
       color: #444;
-      font-weight: 500;
-      font-size: 14px;
+      font-weight: 600;
+      font-size: 15px;
       white-space: nowrap;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.2s ease, color 0.2s ease;
     }
     nav a:hover {
+      background: #f0f2f5;
       color: #000;
     }
     /* Hamburger menu */
@@ -76,15 +81,31 @@
         align-items: flex-start;
         width: 100%;
         margin-top: 10px;
-        background: #fff;
+        background: #ffffffee;
         border: 1px solid #ddd;
         border-radius: 8px;
         padding: 10px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        font-size: 15px;
+      }
+      nav a {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        border-bottom: 1px solid #eee;
+      }
+      nav a:last-child {
+        border-bottom: none;
       }
       nav.show {
         display: flex;
+        animation: fadeIn 0.3s ease-in-out;
       }
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
     }
     .hero {
       text-align: center;
