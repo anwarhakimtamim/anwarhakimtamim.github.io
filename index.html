@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Anwar Hakim Tamim — E-Portfolio</title>
+  <title>Home — Anwar Hakim Tamim</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -16,86 +16,106 @@
     header {
       background: #ffffffcc;
       backdrop-filter: blur(6px);
-      padding: 15px 10%;
+      padding: 15px 5%;
       border-bottom: 1px solid #d1d5db;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    .logo img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: #ddd;
-      border: 2px solid #9ca3af;
-    }
     .logo-text {
-      font-size: 20px;
-      font-weight: 600;
+      font-size: 24px;
+      font-weight: 700;
       color: #111;
+      font-family: Orbitron, sans-serif;
     }
     nav {
       display: flex;
       gap: 15px;
       align-items: center;
-      flex-wrap: nowrap; /* Prevent wrapping */
+      flex-wrap: wrap;
     }
     nav a {
       text-decoration: none;
       color: #444;
       font-weight: 500;
-      font-size: 14px; /* Smaller font size for nav links */
-      white-space: nowrap; /* Ensure text stays on one line */
+      font-size: 14px;
+      white-space: nowrap;
     }
     nav a:hover {
       color: #000;
     }
-    .special-link {
-      font-family: Orbitron, sans-serif;
-      font-weight: 700;
-      color: #111;
-      font-size: 15px; /* Slightly larger for distinction */
+    /* Hamburger menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
     }
-    .italic-link {
-      font-style: italic;
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: #333;
+      transition: all 0.3s ease;
+    }
+    .menu-toggle.active div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle.active div:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 10px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+      nav.show {
+        display: flex;
+      }
     }
     .hero {
       text-align: center;
-      padding: 70px 10%;
-      background: linear-gradient(180deg, #d6d8db, #eceff1); /* Slightly darker gradient */
+      padding: 60px 10%;
+      background: linear-gradient(180deg, #d6d8db, #eceff1);
     }
     .hero h1 {
       margin: 0;
-      font-size: 34px;
+      font-size: 32px;
       color: #111;
     }
     .hero p {
-      margin-top: 12px;
-      color: #333; /* Darker subtitle */
+      margin-top: 10px;
+      color: #555;
+      font-size: 16px;
     }
     section {
-      padding: 50px 10%;
+      padding: 40px 8%;
       background: #ffffffdd;
       backdrop-filter: blur(4px);
-      margin: 40px auto;
+      margin: 30px auto;
       border-radius: 12px;
       max-width: 900px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
     section h2 {
-      font-size: 22px;
-      margin-bottom: 15px;
+      font-size: 20px;
+      margin-bottom: 20px;
       color: #222;
       border-left: 4px solid #9ca3af;
       padding-left: 10px;
-    }
-    section p {
-      color: #444;
     }
     footer {
       text-align: center;
@@ -109,23 +129,25 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/anwarhakimtamim/anwarhakimtamim.github.io/refs/heads/main/rolext.jpg">
-      <div class="logo-text">Anwar Hakim Tamim</div>
+    <div class="logo-text">Anwar Hakim Tamim — Home</div>
+    <div class="menu-toggle" onclick="this.classList.toggle('active'); document.querySelector('nav').classList.toggle('show')">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
     <nav>
-      <a href="#story" class="special-link">Semiconductor Story</a>
-      <a href="education">Education</a>
-      <a href="#resume">Resume</a>
-      <a href="#courses">Courses</a>
-      <a href="#integrated">Integrated Learning</a>
-      <a href="#citation">Citation</a>
-      <a href="#mystories" class="italic-link">My Stories</a>
+      <a href="index.html">Home</a>
+      <a href="education.html">Education</a>
+      <a href="resume.html">Resume</a>
+      <a href="courses.html">Courses</a>
+      <a href="integrated.html">Integrated Learning</a>
+      <a href="citation.html">Citation</a>
+      <a href="mystories.html">My Stories</a>
     </nav>
   </header>
 
   <div class="hero">
-    <h1>Welcome to My Portfolio Website</h1>
+    <h1>Welcome to My E-Portfolio Website</h1>
     <p>Graduate Student • Microelectronics & Semiconductor Engineering</p>
   </div>
 
@@ -139,7 +161,7 @@
   </section>
 
   <footer>
-    © <span id="year"></span> Anwar Hakim Tamim — Portfolio
+    © <span id="year"></span> Anwar Hakim Tamim — Home Page
   </footer>
 
   <script>
