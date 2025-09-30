@@ -3,163 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home — Anwar Hakim Tamim</title>
+  <title>Education — Anwar Hakim Tamim</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Inter, sans-serif;
-      color: #222;
-      background: #f0f2f5 url('https://www.transparenttextures.com/patterns/cubes.png');
-      line-height: 1.6;
-    }
-    header {
-      background: #ffffffcc;
-      backdrop-filter: blur(6px);
-      padding: 15px 5%;
-      border-bottom: 1px solid #d1d5db;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-    }
-    .logo-text {
-      font-size: 24px;
-      font-weight: 700;
-      color: #111;
-      font-family: Orbitron, sans-serif;
-    }
-    nav {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      font-size: 15px;
-      white-space: nowrap;
-      padding: 10px 14px;
-      border-radius: 6px;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-    nav a:hover {
-      background: #e5e7eb;
-      color: #000;
-    }
-    /* Hamburger menu */
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-    }
-    .menu-toggle div {
-      width: 28px;
-      height: 3px;
-      background: #333;
-      transition: all 0.3s ease;
-    }
-    .menu-toggle.active div:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    .menu-toggle.active div:nth-child(2) {
-      opacity: 0;
-    }
-    .menu-toggle.active div:nth-child(3) {
-      transform: rotate(-45deg) translate(6px, -6px);
-    }
+    /* --- Base / Theme --- */
+    body { margin: 0; font-family: Inter, sans-serif; color: #222; background: #f0f2f5 url('https://www.transparenttextures.com/patterns/cubes.png'); line-height: 1.6; }
+    a { color: inherit; }
+
+    /* --- Header & Nav --- */
+    header { background: #ffffffcc; backdrop-filter: blur(6px); padding: 15px 5%; border-bottom: 1px solid #d1d5db; display: flex; justify-content: space-between; align-items: center; position: relative; }
+    .logo-text { font-size: 24px; font-weight: 700; color: #111; font-family: Orbitron, sans-serif; }
+    nav { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: #333; font-weight: 600; font-size: 15px; white-space: nowrap; padding: 10px 14px; border-radius: 6px; transition: background 0.2s ease, color 0.2s ease; }
+    nav a:hover { background: #e5e7eb; color: #000; }
+
+    /* --- Mobile Hamburger (simple, the version you liked) --- */
+    .menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+    .menu-toggle div { width: 28px; height: 3px; background: #333; transition: all 0.3s ease; }
+    .menu-toggle.active div:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .menu-toggle.active div:nth-child(2) { opacity: 0; }
+    .menu-toggle.active div:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
     @media (max-width: 768px) {
-      .menu-toggle {
-        display: flex;
-      }
-      nav {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        margin-top: 10px;
-        background: #ffffffee;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 0;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      }
-      nav a {
-        width: 100%;
-        padding: 14px 18px;
-        font-size: 16px;
-        font-weight: 500;
-        border-bottom: 1px solid #eee;
-        color: #333;
-        background: #fff;
-      }
-      nav a:hover {
-        background: #f0f2f5;
-        color: #000;
-      }
-      nav a:last-child {
-        border-bottom: none;
-      }
-      nav.show {
-        display: flex;
-        animation: fadeIn 0.25s ease-in-out;
-      }
+      .menu-toggle { display: flex; }
+      nav { display: none; flex-direction: column; align-items: stretch; width: 100%; margin-top: 10px; background: #ffffffee; border: 1px solid #ddd; border-radius: 8px; padding: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+      nav a { width: 100%; padding: 14px 18px; font-size: 16px; font-weight: 500; border-bottom: 1px solid #eee; color: #333; background: #fff; }
+      nav a:last-child { border-bottom: none; }
+      nav.show { display: flex; }
     }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-5px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    .hero {
-      text-align: center;
-      padding: 60px 10%;
-      background: linear-gradient(180deg, #d6d8db, #eceff1);
-    }
-    .hero h1 {
-      margin: 0;
-      font-size: 32px;
-      color: #111;
-    }
-    .hero p {
-      margin-top: 10px;
-      color: #555;
-      font-size: 16px;
-    }
-    section {
-      padding: 40px 8%;
-      background: #ffffffdd;
-      backdrop-filter: blur(4px);
-      margin: 30px auto;
-      border-radius: 12px;
-      max-width: 900px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    section h2 {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #222;
-      border-left: 4px solid #9ca3af;
-      padding-left: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #666;
-      font-size: 14px;
-      border-top: 1px solid #d1d5db;
-      background: #f9fafb;
-    }
+
+    /* --- Hero --- */
+    .hero { text-align: center; padding: 60px 10%; background: linear-gradient(180deg, #d6d8db, #eceff1); }
+    .hero h1 { margin: 0; font-size: 32px; color: #111; }
+
+    /* --- Sections --- */
+    section { padding: 40px 8%; background: #ffffffdd; backdrop-filter: blur(4px); margin: 30px auto; border-radius: 12px; max-width: 900px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    section h2 { font-size: 20px; margin-bottom: 20px; color: #222; border-left: 4px solid #9ca3af; padding-left: 10px; }
+
+    /* --- Education Cards --- */
+    .edu-card { margin-bottom: 25px; padding: 16px 18px; border-left: 3px solid #9ca3af; background: #fafafa; border-radius: 8px; }
+    .edu-card h3 { margin: 0; font-size: 18px; color: #111; }
+    .meta { margin: 6px 0 0; color: #444; font-size: 14px; }
+
+    /* --- Footer --- */
+    footer { text-align: center; padding: 20px; color: #666; font-size: 14px; border-top: 1px solid #d1d5db; background: #f9fafb; }
   </style>
 </head>
 <body>
+  <!-- Header with Home + section links -->
   <header>
-    <div class="logo-text">Anwar Hakim Tamim — Home</div>
+    <div class="logo-text">Anwar Hakim Tamim — Education</div>
     <div class="menu-toggle" onclick="this.classList.toggle('active'); document.querySelector('nav').classList.toggle('show')">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div></div><div></div><div></div>
     </div>
     <nav>
       <a href="index.html">Home</a>
@@ -172,22 +67,33 @@
     </nav>
   </header>
 
+  <!-- Hero -->
   <div class="hero">
-    <h1>Welcome to My E-Portfolio Website</h1>
-    <p>Graduate Student • Microelectronics & Semiconductor Engineering</p>
+    <h1>My Education</h1>
   </div>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi! My name is <strong>Anwar Hakim Tamim</strong>, and I am currently a graduate student pursuing a <strong>Master of Science in Microelectronics and Semiconductor Engineering at the University at Buffalo</strong>. I completed my <strong>Bachelor’s degree in Electrical and Electronic Engineering</strong> at Ahsanullah University of Science and Technology in Bangladesh. I have always been motivated by curiosity and the drive to understand how things work, which has shaped my academic journey and enabled me to bridge the gap between theoretical device physics and hands-on semiconductor fabrication.</p>
+  <!-- Education content only (no About Me here) -->
+  <section id="education">
+    <h2>Academic Background</h2>
 
-    <p>My academic focus is in <strong>semiconductor process engineering</strong>, and I aspire to build a career in the <strong>semiconductor industry</strong> as a <strong>process or equipment engineer</strong>. My goal is to contribute to the <strong>design, implementation, and optimization of fabrication processes</strong> that enhance device performance, reliability, and scalability in advanced technology manufacturing.</p>
+    <div class="edu-card">
+      <h3>University at Buffalo, State University of New York, USA</h3>
+      <p class="meta"><strong>M.S., Engineering Sciences — Microelectronics & Semiconductor Engineering</strong></p>
+      <p class="meta">Aug 2024 – Dec 2025 • CGPA: <strong>3.86</strong></p>
+    </div>
 
-    <p>Outside of academics, I enjoy <strong>DIY projects</strong>, whether it’s tuning up my bicycle to keep it running smoothly or repairing everyday items around the house when they break. I like the challenge of figuring out how things work, troubleshooting problems, and finding practical solutions—and arranging those solutions by making the best use of the resources available to me. In my free time, I also love playing <strong>soccer</strong>, enjoying <strong>table tennis matches</strong>, and watching <strong>superhero movies</strong>, which help me recharge and stay balanced.</p>
+    <div class="edu-card">
+      <h3>Ahsanullah University of Science and Technology, Bangladesh</h3>
+      <p class="meta"><strong>B.Sc., Electrical & Electronic Engineering</strong></p>
+      <p class="meta">Mar 2018 – Dec 2022 • CGPA: <strong>3.12</strong></p>
+    </div>
+
+    <h2>Relevant Coursework</h2>
+    <p class="meta">Microelectronic Fabrication Lab, Microelectronic Device Fabrication, Fundamentals of Semiconductor Devices, Solid State Sensors, Fundamentals of Modern VLSI Devices, RF/Microwave Circuits, Analog Integrated Circuits, Digital Integrated Circuits, Consumer Optoelectronics.</p>
   </section>
 
   <footer>
-    © <span id="year"></span> Anwar Hakim Tamim — Home Page
+    © <span id="year"></span> Anwar Hakim Tamim — Education Page
   </footer>
 
   <script>
